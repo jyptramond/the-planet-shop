@@ -1,14 +1,12 @@
 import '../style/PlanetItem.css'
 
-function PlanetItem() {
+function PlanetItem({name, cover, id}) {
 
     return (
-
-        <div className="planetBox">
-        <h2>nom</h2>
-        </div>
-
-    )
+        <li className="planetBox" key={id} > 
+        <h2>{name.toUpperCase()}</h2>
+        <img src={cover} alt={`${name} cover`} />
+        </li> )
 
 
 }

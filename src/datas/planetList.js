@@ -11,16 +11,16 @@ import neptune from '../assets/planets/neptune.jpg'
 export const planetList = [
 
     {
-        name: "Mercury",
-        id: "mer1",
-        cover: mercury,
-        position: 1
-    },
-    {
         name: "Venus",
         id: "ven2",
         cover: venus,
         position: 2
+    },
+    {
+        name: "Mercury",
+        id: "mer1",
+        cover: mercury,
+        position: 1
     },
     {
         name: "Earth",

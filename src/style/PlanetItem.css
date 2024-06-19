@@ -1,11 +1,20 @@
 .planetBox {
-    background-color: blue;
-    width: 200px;
-    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    width: 250px;
+    height: fit-content;
+    padding: 0 0 20px 0;
+    border-radius: 20px;
 }
 
+.planetBox img {
+    width: 200px;
+    aspect-ratio: 1 / 1;
+}
 
-h2 {
-    color:red;
-    text-align: center;
+.planetBox h2 {
+    color: white;
 }

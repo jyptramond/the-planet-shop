@@ -1,13 +1,13 @@
 import '../style/App.css'
 import Header from './Header'
-import PlanetItem from './PlanetItem'
+import ShoppingPlanet from './ShoppingPlanet'
 
 function App() {
   return (
     <div className="App">
 
       <Header />
-      <PlanetItem />
+      <ShoppingPlanet />
 
     </div>
 
