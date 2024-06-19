@@ -1,0 +1,35 @@
+.cart-open {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: whitesmoke;
+    width: 500px;
+    padding: 15px
+}
+
+.cart-open h2 {
+    text-align: center;
+}
+
+.cart-open div {
+    padding: 5px;
+}
+
+.cart-open div:nth-child(even) {
+    background-color: grey;
+}
+
+.cart-closed {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: whitesmoke;
+    width: 50px;
+    height: 50px;
+}
+
+.cartList {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

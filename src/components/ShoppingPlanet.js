@@ -4,7 +4,7 @@ import '../style/ShoppingPlanet.css'
 
 
 
-function ShoppingPlanet() {
+function ShoppingPlanet({ cart, updateCart }) {
 
 	let planetSorted = planetList.sort((a, b) => a.position - b.position);
 
@@ -14,13 +14,15 @@ function ShoppingPlanet() {
 
         <div>
 				<ul className="list">
-					{planetSorted.map(({ id, cover, name }) =>
-						
+					{planetList.map(({ id, cover, name }) =>
+							<div key={id}>
 								<PlanetItem
 									cover={cover}
 									name={name}
                                     id={id}
+									cart={cart} updateCart={updateCart}
 								/>
+							</div>
 					)}
 				</ul>
 			</div>
