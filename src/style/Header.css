@@ -1,5 +1,9 @@
 h1 {
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
     color:white;
+    height: 75px;
 }

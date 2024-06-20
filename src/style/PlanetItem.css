@@ -8,13 +8,47 @@
     height: fit-content;
     padding: 0 0 20px 0;
     border-radius: 20px;
+    border: solid white 2px;
+}
+
+.planetBox p {
+    color: white;
+    margin: 0;
+}
+
+.planetBox p.price {
+    color:red;
+    font-size: 20px;
+}
+
+.planetBox h2 {
+    margin-bottom: 0;
+    font-family: Exo;
+    color: rgb(4, 224, 4);
 }
 
 .planetBox img {
+    margin: 10px 0;
     width: 200px;
     aspect-ratio: 1 / 1;
 }
 
-.planetBox h2 {
+.planetBox img:hover {
+    cursor: zoom-in;
+    filter: grayscale(100%);
+    transition: filter ease 0.5s;
+}
+
+.planetBox button {
+    margin-top: 10px;
+    padding: 5px;
+    font-size: 15px;
     color: white;
+    background-color: black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.planetBox button:hover {
+    filter: invert();
 }

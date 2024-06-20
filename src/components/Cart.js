@@ -1,5 +1,6 @@
 import '../style/Cart.css'
 import { useState } from 'react'
+import menuicon from '../assets/menu-icon.png'
 
 function Cart({ cart, updateCart }) {
 
@@ -30,7 +31,9 @@ return isOpen ? (
             ))}
         </div>
 
-        <button className="closeCart" onClick={() => setIsOpen(false)}>Fermer</button>
+            <button className="buttons-cart" onClick={() => updateCart([])}>Vider le panier</button>
+            <button className="buttons-cart" onClick={() => setIsOpen(false)}>Fermer le panier</button>
+        
 
     </div>
 
@@ -38,7 +41,7 @@ return isOpen ? (
 
 ) : (
 
-    <div className="cart-closed" onClick={() => setIsOpen(true)}>
+    <div className="cart-closed" onClick={() => setIsOpen(true)}><img className='icon' src={menuicon} alt={`ouvrir le panier`}></img>
     </div>
 
 )

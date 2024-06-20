@@ -1,0 +1,24 @@
+.category-layout {
+    display: flex;
+    justify-content: center;
+}
+
+select {
+    color: white;
+    background-color: black;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+}
+
+select:hover {
+    
+    cursor: pointer;
+    filter:invert();
+}
+
+option {
+    text-align: center;
+}

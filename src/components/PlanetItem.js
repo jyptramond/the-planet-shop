@@ -1,6 +1,8 @@
 import '../style/PlanetItem.css'
 
-function PlanetItem({name, cover, id, cart, updateCart}) {
+import { planetList } from '../datas/planetList'
+
+function PlanetItem({name, cover, id, category, price, cart, updateCart, planetWindow, openWindow, activePlanet, setActivePlanet}) {
 
 
     function addToCart(name) {
@@ -16,11 +18,37 @@ function PlanetItem({name, cover, id, cart, updateCart}) {
         
     }
 
+    function findActivePlanet(name) {
+        const clickedPlanet = planetList.find((planet) => planet.name === name);
+        setActivePlanet(clickedPlanet);
+        console.log("activePlanet", activePlanet)
+
+    }
+
+    function simplifyPrice(price) {
+
+        if (price >= 1000000000) {
+            return price/1000000000+"G"
+        }
+
+        if (price >= 1000000) {
+            return price/1000000+"M"
+        }
+
+        if (price >= 1000) {
+            return price/1000+"K"
+        }
+
+        return price
+    }
+
 
     return (
-        <li className="planetBox" key={id} > 
+        <li className="planetBox" key={id}> 
         <h2>{name.toUpperCase()}</h2>
-        <img src={cover} alt={`${name} cover`} />
+        <p><i>{category}</i></p>
+        <img src={cover} alt={`${name} cover`} onClick={() => {findActivePlanet(name); openWindow(true)}} />
+        <p className="price">{simplifyPrice(price)} ¢</p>
         <button onClick={() => addToCart(name)}>Ajouter au panier</button>
         </li> )
 
