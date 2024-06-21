@@ -39,7 +39,7 @@ import haumea from '../assets/haumea.jpg'
 
 export const planetList = [
     {
-        name: "Sun",
+        name: "The Sun",
         category: "star",
         id: "sun0",
         cover: sun,
@@ -79,7 +79,7 @@ export const planetList = [
         description: "Our home planet, the only one known to support life."
     },
     {
-        name: "The moon",
+        name: "The Moon",
         category: "moon",
         id: "moo3",
         cover: moon,
@@ -119,7 +119,7 @@ export const planetList = [
         description: "The larger and innermost moon of Mars."
     },
     {
-        name: "Cérès",
+        name: "Ceres",
         category: "dwarf planet",
         id: "cer5",
         cover: ceres,
@@ -159,7 +159,7 @@ export const planetList = [
         description: "One of the most geologically active bodies in the Solar System, orbiting Jupiter."
     },
     {
-        name: "Ganymède",
+        name: "Ganymede",
         category: "moon",
         id: "gan6",
         cover: ganymede,
@@ -199,7 +199,7 @@ export const planetList = [
         description: "Saturn's largest moon, with a thick atmosphere and liquid methane lakes."
     },
     {
-        name: "Encelade",
+        name: "Enceladus",
         category: "moon",
         id: "enc7",
         cover: encelade,
@@ -289,7 +289,7 @@ export const planetList = [
         description: "The largest moon of Neptune, and the only large moon in the Solar System with a retrograde orbit."
     },
     {
-        name: "Pluton",
+        name: "Pluto",
         category: "dwarf planet",
         id: "plu10",
         cover: pluton,
@@ -316,7 +316,8 @@ export const planetList = [
         position: 11,
         price: 600000,
         apsis: 34.647,
-        description: "A dwarf planet with a highly elongated shape and two known moons."
+        description: "A dwarf planet with a highly elongated shape and two known moons.",
+        artistic: true
     },
     {
         name: "Makemake",
@@ -326,17 +327,19 @@ export const planetList = [
         position: 12,
         price: 450000,
         apsis: 38.104,
-        description: "A dwarf planet with a reddish color, located in the Kuiper Belt."
+        description: "A dwarf planet with a reddish color, located in the Kuiper Belt.",
+        artistic: true
     },
     {
-        name: "Éris",
+        name: "Eris",
         category: "dwarf planet",
         id: "eri13",
         cover: eris,
         position: 13,
         price: 550000,
         apsis: 38.271,
-        description: "One of the largest known dwarf planets, located in the scattered disc."
+        description: "One of the largest known dwarf planets, located in the scattered disc.",
+        artistic: true
     },
     {
         name: "Sedna",
@@ -346,6 +349,7 @@ export const planetList = [
         position: 14,
         price: 400000,
         apsis: 76.0616,
-        description: "A distant and mysterious dwarf planet with an extremely elliptical orbit."
+        description: "A distant and mysterious dwarf planet with an extremely elliptical orbit.",
+        artistic: true
     },
 ]

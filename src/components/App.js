@@ -8,13 +8,30 @@ function App() {
 
   const [cart, updateCart] = useState([])
 
+  function simplifyPrice(price) {
+
+    if (price >= 1000000000) {
+        return price/1000000000+"G"
+    }
+
+    if (price >= 1000000) {
+        return price/1000000+"M"
+    }
+
+    if (price >= 1000) {
+        return price/1000+"K"
+    }
+
+    return price
+}
+
   return (
     <div className="App">
 
       <Header />
         <div className="layout">
-          <Cart cart={cart} updateCart={updateCart} />
-          <ShoppingPlanet cart={cart} updateCart={updateCart} />
+          <Cart cart={cart} updateCart={updateCart} simplifyPrice={simplifyPrice}/>
+          <ShoppingPlanet cart={cart} updateCart={updateCart} simplifyPrice={simplifyPrice}/>
         </div>
 
     </div>

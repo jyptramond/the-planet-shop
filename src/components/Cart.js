@@ -2,10 +2,11 @@ import '../style/Cart.css'
 import { useState } from 'react'
 import menuicon from '../assets/menu-icon.png'
 
-function Cart({ cart, updateCart }) {
+function Cart({ cart, updateCart, simplifyPrice }) {
 
     const [isOpen, setIsOpen] = useState(true)
 
+    const total = cart.reduce((acc, planet) => acc + planet.price, 0);
 
     function removeFromCart(index) {
         
@@ -21,15 +22,17 @@ return isOpen ? (
         <div className="cartItems">
             <h2>Votre panier</h2>
 
-            {cart.map(({ name }, index) => (
+            {cart.map(({ name, price }, index) => (
 
                 <div key={`${name}-${index}`} className="cartList">
-                    🌕 {name} 
-                    <button onClick={() => removeFromCart(index)}>X</button>
+                    🌕 {name} | {simplifyPrice(price)} ¢
+                    <button className='close' onClick={() => removeFromCart(index)}>X</button>
                 </div>
 
             ))}
         </div>
+
+            <p className='total'>Total: {simplifyPrice(total)} ¢</p>
 
             <button className="buttons-cart" onClick={() => updateCart([])}>Vider le panier</button>
             <button className="buttons-cart" onClick={() => setIsOpen(false)}>Fermer le panier</button>

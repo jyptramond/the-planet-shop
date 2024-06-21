@@ -1,9 +1,12 @@
 import '../style/PlanetItem.css'
+import React, {useState} from 'react'
+import { createPortal } from 'react-dom'
+import ModalContent from './ModalContent'
 
-import { planetList } from '../datas/planetList'
 
-function PlanetItem({name, cover, id, category, price, cart, updateCart, planetWindow, openWindow, activePlanet, setActivePlanet}) {
+function PlanetItem({name, cover, id, category, price, description, apsis, artistic, cart, updateCart, simplifyPrice}) {
 
+    const [showModal, setShowModal] = useState(false)
 
     function addToCart(name) {
 
@@ -12,45 +15,39 @@ function PlanetItem({name, cover, id, category, price, cart, updateCart, planetW
         if (currentPlanet) {
             alert('there is only one '+name)
         } else {
-            updateCart([...cart, { name }]);
+            updateCart([...cart, { name, price }]);
         }
 
         
     }
 
-    function findActivePlanet(name) {
-        const clickedPlanet = planetList.find((planet) => planet.name === name);
-        setActivePlanet(clickedPlanet);
-        console.log("activePlanet", activePlanet)
-
-    }
-
-    function simplifyPrice(price) {
-
-        if (price >= 1000000000) {
-            return price/1000000000+"G"
-        }
-
-        if (price >= 1000000) {
-            return price/1000000+"M"
-        }
-
-        if (price >= 1000) {
-            return price/1000+"K"
-        }
-
-        return price
-    }
 
 
     return (
+        <>
         <li className="planetBox" key={id}> 
-        <h2>{name.toUpperCase()}</h2>
+        <h2 onClick={() => setShowModal(true)}>{name.toUpperCase()}</h2>
         <p><i>{category}</i></p>
-        <img src={cover} alt={`${name} cover`} onClick={() => {findActivePlanet(name); openWindow(true)}} />
+        <div className='img-box'>
+        <img src={cover} alt={`${name} cover`} onClick={() => setShowModal(true)}/>
+        </div>
         <p className="price">{simplifyPrice(price)} ¢</p>
-        <button onClick={() => addToCart(name)}>Ajouter au panier</button>
-        </li> )
+        <button onClick={() => addToCart(name, price)}>Ajouter au panier</button>
+        </li>
+        {showModal && createPortal(
+            <ModalContent 
+            closeModal={() => setShowModal(false)}
+            name={name}
+            apsis={apsis}
+            cover={cover}
+            price={price}
+            description={description}
+            artistic={artistic}
+            simplifyPrice={simplifyPrice}
+            />, 
+            document.body)} 
+        </>
+        )
 
 
 }

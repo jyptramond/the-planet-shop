@@ -7,8 +7,8 @@
     width: 250px;
     height: fit-content;
     padding: 0 0 20px 0;
-    border-radius: 20px;
-    border: solid white 2px;
+    border: solid rgba(255, 255, 255, 0.486) 1px;
+    border-radius: 5px;
 }
 
 .planetBox p {
@@ -17,26 +17,35 @@
 }
 
 .planetBox p.price {
-    color:red;
+    color: var(--red-color);
     font-size: 20px;
+    font-weight: bold;
 }
 
 .planetBox h2 {
     margin-bottom: 0;
     font-family: Exo;
-    color: rgb(4, 224, 4);
+    color: white;
+}
+
+.planetBox .img-box {
+    width: 230px;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .planetBox img {
-    margin: 10px 0;
     width: 200px;
     aspect-ratio: 1 / 1;
 }
 
 .planetBox img:hover {
-    cursor: zoom-in;
-    filter: grayscale(100%);
-    transition: filter ease 0.5s;
+    cursor: pointer;
+    width:230px;
+    filter:brightness(1.2);
+    transition: filter ease 0.5s, width ease 0.5s;
 }
 
 .planetBox button {

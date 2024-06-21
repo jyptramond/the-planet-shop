@@ -1,5 +1,4 @@
 import PlanetItem from './PlanetItem'
-import PlanetDescription from './PlanetDescription'
 import Categories from './Categories'
 import { planetList } from '../datas/planetList'
 import '../style/ShoppingPlanet.css'
@@ -7,11 +6,12 @@ import { useState } from 'react'
 
 
 
-function ShoppingPlanet({ cart, updateCart }) {
+function ShoppingPlanet({ cart, updateCart, simplifyPrice }) {
 
-	const [activeCategory, setActiveCategory] = useState('')
-	const [planetWindow, openWindow] = useState(false)
-	const [activePlanet, setActivePlanet] = useState('')
+	const [activeCategory, setActiveCategory] = useState('');
+
+	
+
 
 	planetList.sort((a, b) => a.position - b.position);
 
@@ -30,7 +30,7 @@ function ShoppingPlanet({ cart, updateCart }) {
 
 				<ul className="list">
 
-						{planetList.map(({ id, cover, name, category, price }) =>
+						{planetList.map(({ id, cover, name, category, price, description, apsis, artistic }) =>
 
 							activeCategory === '' || activeCategory === category ? (
 								<div key={id}>
@@ -40,24 +40,17 @@ function ShoppingPlanet({ cart, updateCart }) {
 										id={id}
 										category={category}
 										price={price}
+										description={description}
+										apsis={apsis}
+										artistic={artistic}
 										cart={cart} 
 										updateCart={updateCart}
-										planetWindow = {planetWindow}
-										openWindow = {openWindow}
-										activePlanet = {activePlanet}
-										setActivePlanet = { setActivePlanet }
+										simplifyPrice={simplifyPrice}
 									/>
 								</div>
 						) : null 
 					)}
 				</ul>
-
-				<PlanetDescription 
-				planetWindow = { planetWindow }
-				openWindow = { openWindow } 
-				activePlanet = { activePlanet }
-				setActiveCategory = {setActiveCategory}
-				/>
 
 			</div>
 
