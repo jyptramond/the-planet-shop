@@ -74,7 +74,7 @@ export const planetList = [
         id: "ear3",
         cover: earth,
         position: 3,
-        price: 100000000,
+        price: 'infinite',
         apsis: 0.9832898912,
         description: "Our home planet, the only one known to support life."
     },

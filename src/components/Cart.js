@@ -6,7 +6,18 @@ function Cart({ cart, updateCart, simplifyPrice }) {
 
     const [isOpen, setIsOpen] = useState(true)
 
-    const total = cart.reduce((acc, planet) => acc + planet.price, 0);
+    let total;
+    
+    const containsEarth = cart.some(element => element.name === 'Earth');
+
+    if (!containsEarth) {
+        total = 'Total: '+simplifyPrice(cart.reduce((acc, planet) => acc + planet.price, 0));
+    }
+    else {
+        total = 'Total: '+'Math.error'
+    }
+
+    
 
     function removeFromCart(index) {
         
@@ -25,14 +36,14 @@ return isOpen ? (
             {cart.map(({ name, price }, index) => (
 
                 <div key={`${name}-${index}`} className="cartList">
-                    <p>🌕 <strong>{name}</strong> | <span>{simplifyPrice(price)} ¢</span></p>
+                    <p>🌕 <strong>{name}</strong> | <span>{simplifyPrice(price)}</span></p>
                     <button className='close' onClick={() => removeFromCart(index)}>X</button>
                 </div>
 
             ))}
         </div>
 
-            <p className='total'>Total: {simplifyPrice(total)} ¢</p>
+            <p className='total'>{total}</p>
 
             <button className="buttons-cart" onClick={() => updateCart([])}>Vider le panier</button>
             <button className="buttons-cart button-down" onClick={() => setIsOpen(false)}>Fermer le panier</button>

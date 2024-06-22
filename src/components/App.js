@@ -11,15 +11,19 @@ function App() {
   function simplifyPrice(price) {
 
     if (price >= 1000000000) {
-        return price/1000000000+"G"
+        return price/1000000000+"G ¢"
     }
 
     if (price >= 1000000) {
-        return price/1000000+"M"
+        return price/1000000+"M  ¢"
     }
 
     if (price >= 1000) {
-        return price/1000+"K"
+        return price/1000+"K  ¢"
+    }
+
+    if (price === "infinite") {
+      return 'infinite'
     }
 
     return price

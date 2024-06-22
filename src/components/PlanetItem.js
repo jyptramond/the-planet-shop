@@ -31,7 +31,7 @@ function PlanetItem({name, cover, id, category, price, description, apsis, artis
         <div className='img-box'>
         <img src={cover} alt={`${name} cover`} onClick={() => setShowModal(true)}/>
         </div>
-        <p className="price">{simplifyPrice(price)} ¢</p>
+        <p className="price">{simplifyPrice(price)}</p>
         <button onClick={() => addToCart(name, price)}>Ajouter au panier</button>
         </li>
         {showModal && createPortal(
