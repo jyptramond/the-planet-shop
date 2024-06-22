@@ -1,0 +1,21 @@
+.sorter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    aspect-ratio: 1 / 1;
+    font-size: 30px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border: solid 1px transparent;
+    border-radius: 5px;
+    
+}
+
+.sorter:hover {
+    filter: invert();
+    
+    border: solid 1px white;
+    transition: filter ease 0.5s, border ease 0.5s;
+}

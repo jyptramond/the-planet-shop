@@ -25,7 +25,7 @@ return isOpen ? (
             {cart.map(({ name, price }, index) => (
 
                 <div key={`${name}-${index}`} className="cartList">
-                    🌕 {name} | {simplifyPrice(price)} ¢
+                    <p>🌕 <strong>{name}</strong> | <span>{simplifyPrice(price)} ¢</span></p>
                     <button className='close' onClick={() => removeFromCart(index)}>X</button>
                 </div>
 
@@ -35,7 +35,7 @@ return isOpen ? (
             <p className='total'>Total: {simplifyPrice(total)} ¢</p>
 
             <button className="buttons-cart" onClick={() => updateCart([])}>Vider le panier</button>
-            <button className="buttons-cart" onClick={() => setIsOpen(false)}>Fermer le panier</button>
+            <button className="buttons-cart button-down" onClick={() => setIsOpen(false)}>Fermer le panier</button>
         
 
     </div>

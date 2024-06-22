@@ -1,4 +1,4 @@
-import '../style/Category.css'
+import '../style/Categories.css'
 
 function Categories({categories, setActiveCategory, activeCategory}) {
 
@@ -7,8 +7,6 @@ function Categories({categories, setActiveCategory, activeCategory}) {
     }
 
     return (
-        <div className="category-layout">
-
             <select
                 value= {activeCategory}
                 onChange={(e) => setActiveCategory(e.target.value)}
@@ -19,10 +17,6 @@ function Categories({categories, setActiveCategory, activeCategory}) {
                     <option key={cat} value={cat}>{capitalizeFirstLetter(cat)}</option>
                 ))}
             </select>
-
-
-
-        </div>
     )
 }
 

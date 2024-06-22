@@ -6,6 +6,7 @@ background-color: #ffffff;
 :root {
   --green-color: #41FF00;
   --red-color:  rgb(255, 0, 34);
+  --dark-green:  rgb(0, 146, 19);
 }
 
 body {

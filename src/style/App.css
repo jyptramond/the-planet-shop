@@ -4,3 +4,8 @@
   flex-direction: row;
 }
 
+@media (max-width: 715px) {
+  .layout {
+    flex-direction: column;
+  }
+}

@@ -1,8 +1,10 @@
 .list {
     display: flex;
     flex: row;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 15px;
+    padding:5px;
 }
 
 .shoppingPlanet {
