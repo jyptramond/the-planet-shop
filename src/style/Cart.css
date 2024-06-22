@@ -55,6 +55,10 @@
 }
 
 .cart-closed {
+    
+    border-radius: 20px;
+    border: solid 3px rgba(141, 141, 141, 0.514);
+    margin: 20px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -63,6 +67,12 @@
     background-color: whitesmoke;
     height: 50px;
     aspect-ratio: 1 / 1;
+}
+
+.cart-closed:hover {
+    cursor: pointer;
+    filter:invert();
+    transition: filter ease 0.5s;
 }
 
 img.icon {
