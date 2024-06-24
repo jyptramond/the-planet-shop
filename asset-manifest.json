@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/the-stellar-shop/static/css/main.c537a6c3.css",
-    "main.js": "/the-stellar-shop/static/js/main.629df364.js",
+    "main.css": "/the-stellar-shop/static/css/main.356d1678.css",
+    "main.js": "/the-stellar-shop/static/js/main.64a6b818.js",
     "static/js/453.82dd8263.chunk.js": "/the-stellar-shop/static/js/453.82dd8263.chunk.js",
     "static/media/phobos.jpg": "/the-stellar-shop/static/media/phobos.0ca5cedbef609a76c6fd.jpg",
     "static/media/callisto.jpg": "/the-stellar-shop/static/media/callisto.5dc4e526b8c51ae32242.jpg",
@@ -37,12 +37,12 @@
     "static/media/venus.jpg": "/the-stellar-shop/static/media/venus.6ba762c5ac90f041b117.jpg",
     "static/media/menu-icon.png": "/the-stellar-shop/static/media/menu-icon.3e042f39d9b32713ddd5.png",
     "index.html": "/the-stellar-shop/index.html",
-    "main.c537a6c3.css.map": "/the-stellar-shop/static/css/main.c537a6c3.css.map",
-    "main.629df364.js.map": "/the-stellar-shop/static/js/main.629df364.js.map",
+    "main.356d1678.css.map": "/the-stellar-shop/static/css/main.356d1678.css.map",
+    "main.64a6b818.js.map": "/the-stellar-shop/static/js/main.64a6b818.js.map",
     "453.82dd8263.chunk.js.map": "/the-stellar-shop/static/js/453.82dd8263.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c537a6c3.css",
-    "static/js/main.629df364.js"
+    "static/css/main.356d1678.css",
+    "static/js/main.64a6b818.js"
   ]
 }
